@@ -12,7 +12,14 @@ import {
 } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import * as React from "react";
-import { ColorSchemeName, Pressable, Text, View } from "react-native";
+import {
+  ColorSchemeName,
+  Pressable,
+  Text,
+  View,
+  useWindowDimensions,
+  Image,
+} from "react-native";
 
 import MessageScreen from "../screens/MessageScreen";
 import ModalScreen from "../screens/ModalScreen";
@@ -62,7 +69,10 @@ function RootNavigator() {
       <Stack.Screen
         name="Messages"
         component={MessageScreen}
-        options={{ headerShown: true }}
+        options={{
+          headerTitle: ChatRoomHeader,
+          headerBackVisible: true,
+        }}
       />
       <Stack.Screen
         name="NotFound"
@@ -89,6 +99,7 @@ function TabBarIcon(props: {
 //const { width } = useWindowDimensions();
 
 const HomeHeader = () => {
+  const { width } = useWindowDimensions();
   return (
     <View
       style={{
@@ -96,14 +107,40 @@ const HomeHeader = () => {
         justifyContent: "space-between",
         padding: 25,
         alignItems: "center",
-        width: "100%",
+        width,
       }}
     >
-      <Feather name="camera" size={24} color="black" style={{right: 18}} />
+      <Feather name="camera" size={24} color="black" style={{ right: 18 }} />
 
-      <Text style={{ fontSize: 30, fontWeight: "bold"}}>Recent Chats</Text>
+      <Text style={{ fontSize: 30, fontWeight: "bold" }}>Recent Chats</Text>
 
       <Feather name="user" size={24} color="black" style={{ padding: 5 }} />
+    </View>
+  );
+};
+const ChatRoomHeader = (props) => {
+  const { width } = useWindowDimensions();
+  return (
+    <View
+      style={{
+        flexDirection: "row",
+        justifyContent: "space-between",
+        padding: 25,
+        alignItems: "center",
+        width: width - 25,
+      }}
+    >
+      <Image
+        source={{
+          uri: "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/vadim.jpg",
+        }}
+        style={{ width: 48, height: 48, borderRadius: 48 }}
+      />
+      {/* <Feather name="camera" size={24} color="black" style={{right: 18}} /> */}
+
+      <Text style={{ fontSize: 28, fontWeight: "bold" }}>{props.children}</Text>
+
+      <Feather name="video" size={24} color="black" style={{ padding: 5 }} />
     </View>
   );
 };

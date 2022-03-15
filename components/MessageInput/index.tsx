@@ -35,13 +35,14 @@ const MessageInput = () => {
   };
   return (
     <KeyboardAvoidingView
-    behavior={Platform.OS === 'android' ? 'height' : 'padding'}
-     style={styles.root}>
+      behavior={Platform.OS === "android" ? "height" : "padding"}
+      style={styles.root}
+    >
       <View style={styles.inputContainer}>
         <SimpleLineIcons
           name="emotsmile"
           size={22}
-          color="#03256C"
+          color="#1D1A05"
           style={styles.icon}
         />
         <TextInput
@@ -55,13 +56,13 @@ const MessageInput = () => {
         <AntDesign
           name="camerao"
           size={22}
-          color="#03256C"
+          color="#1D1A05"
           style={{ marginHorizontal: 10 }}
         />
         <Foundation
           name="microphone"
           size={22}
-          color="#03256C"
+          color="#1D1A05"
           style={styles.icon}
         />
       </View>

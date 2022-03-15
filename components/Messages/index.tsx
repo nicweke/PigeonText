@@ -2,8 +2,8 @@ import { View, Text } from "react-native";
 import React from "react";
 import styles from "./styles";
 
-const yellow = "#FDFFFC";
-const green = "#2541B2";
+const blue = "#1ADC00";
+const grey = "#dee2e6";
 const myID = "u1";
 
 const Messages = ({message}) => {
@@ -14,15 +14,18 @@ const Messages = ({message}) => {
       style={[
         styles.container,
         {
-          backgroundColor: isMe ? yellow : green,
+          backgroundColor: isMe ? blue : grey,
           marginLeft: isMe ? "auto" : 10,
           marginRight: isMe ? 10 : 'auto',
-          borderWidth: isMe ? 2 : 0,
+          borderWidth: isMe ? 0 : 0,
           borderColor: isMe ? '#6c757d' : 'white',
+          borderBottomRightRadius: isMe ? 0 : 18,
+          borderTopLeftRadius: isMe ? 18 : 0,
+          
         },
       ]}
     >
-      <Text style={[styles.text, {color: isMe ? 'black' : 'white', }, ]}>{message.content}</Text>
+      <Text style={[styles.text, {color: isMe ? 'white' : 'black', }, ]}>{message.content}</Text>
     </View>
   );
 };
