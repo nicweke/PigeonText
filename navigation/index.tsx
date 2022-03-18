@@ -112,7 +112,7 @@ const HomeHeader = () => {
     >
       <Feather name="camera" size={24} color="black" style={{ right: 18 }} />
 
-      <Text style={{ fontSize: 30, fontWeight: "bold" }}>Recent Chats</Text>
+      <Text style={{  fontSize: 30, fontWeight: "bold" }}>Recent Chats</Text>
 
       <Feather name="user" size={24} color="black" style={{ padding: 5 }} />
     </View>

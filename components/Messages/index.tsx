@@ -2,7 +2,7 @@ import { View, Text } from "react-native";
 import React from "react";
 import styles from "./styles";
 
-const blue = "#1ADC00";
+const green = "#1ADC00";
 const grey = "#dee2e6";
 const myID = "u1";
 
@@ -14,7 +14,7 @@ const Messages = ({message}) => {
       style={[
         styles.container,
         {
-          backgroundColor: isMe ? blue : grey,
+          backgroundColor: isMe ? green : grey,
           marginLeft: isMe ? "auto" : 10,
           marginRight: isMe ? 10 : 'auto',
           borderWidth: isMe ? 0 : 0,

@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-pigeontext-staging-201715-authRole",
+      "UnauthRoleArn": "arn:aws:iam::185954901354:role/amplify-pigeontext-staging-201715-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::185954901354:role/amplify-pigeontext-staging-201715-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-pigeontext-staging-201715-deployment",
+      "UnauthRoleName": "amplify-pigeontext-staging-201715-unauthRole",
+      "StackName": "amplify-pigeontext-staging-201715",
+      "StackId": "arn:aws:cloudformation:us-east-1:185954901354:stack/amplify-pigeontext-staging-201715/e8594260-a49c-11ec-99b5-0a0fff13ba27",
+      "AmplifyAppId": "d3ux5vk09hudpy"
+    },
+    "categories": {
+      "auth": {
+        "pigeonText": {}
+      }
+    }
+  }
+}
